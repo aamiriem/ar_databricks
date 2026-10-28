@@ -1,0 +1,15 @@
+{
+	"name": "datafactoryarreza",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1a55842b-814c-4597-8b5d-7157a172ba4e",
+		"tenantId": "37baea96-6bbd-4315-9835-df739f88fe43"
+	}
+}
