@@ -18,7 +18,6 @@
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/sales/blobs/",
-			"blobPathEndsWith": ".csv",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/f1eba71a-1133-42c4-a850-2bb325096eb4/resourceGroups/argrp/providers/Microsoft.Storage/storageAccounts/blobstaamirreza",
 			"events": [
