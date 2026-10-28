@@ -21,11 +21,15 @@
 		},
 		"tr_blob_properties_pl_copy_parameters_folder": {
 			"type": "string",
-			"defaultValue": "@triggerBody.filename"
+			"defaultValue": "@triggerBody.fileName"
 		},
 		"tr_blob_properties_pl_copy_parameters_file_name": {
 			"type": "string",
 			"defaultValue": "@triggerBody.folderPath"
+		},
+		"tr_blob_properties_pl_copy_parameters_conatiner": {
+			"type": "string",
+			"defaultValue": "sales"
 		},
 		"tr_blob_properties_typeProperties_scope": {
 			"type": "string",
@@ -72,6 +76,9 @@
 					},
 					"tr_blob_properties_pl_copy_parameters_file_name": {
 						"value": "[parameters('tr_blob_properties_pl_copy_parameters_file_name')]"
+					},
+					"tr_blob_properties_pl_copy_parameters_conatiner": {
+						"value": "[parameters('tr_blob_properties_pl_copy_parameters_conatiner')]"
 					},
 					"tr_blob_properties_typeProperties_scope": {
 						"value": "[parameters('tr_blob_properties_typeProperties_scope')]"
