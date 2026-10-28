@@ -15,10 +15,10 @@
 			"value": "https://adlsarfabric.dfs.core.windows.net/"
 		},
 		"tr_blob_properties_pl_copy_parameters_folder": {
-			"value": "@triggerBody.fileName"
+			"value": "@triggerBody().fileName"
 		},
 		"tr_blob_properties_pl_copy_parameters_file_name": {
-			"value": "@triggerBody.folderPath"
+			"value": "@triggerBody().folderPath"
 		},
 		"tr_blob_properties_pl_copy_parameters_conatiner": {
 			"value": "sales"

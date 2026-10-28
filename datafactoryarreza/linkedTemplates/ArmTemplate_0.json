@@ -21,11 +21,11 @@
 		},
 		"tr_blob_properties_pl_copy_parameters_folder": {
 			"type": "string",
-			"defaultValue": "@triggerBody.fileName"
+			"defaultValue": "@triggerBody().fileName"
 		},
 		"tr_blob_properties_pl_copy_parameters_file_name": {
 			"type": "string",
-			"defaultValue": "@triggerBody.folderPath"
+			"defaultValue": "@triggerBody().folderPath"
 		},
 		"tr_blob_properties_pl_copy_parameters_conatiner": {
 			"type": "string",
