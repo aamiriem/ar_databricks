@@ -2,7 +2,7 @@
 	"name": "tr_blob",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -10,8 +10,8 @@
 					"type": "PipelineReference"
 				},
 				"parameters": {
-					"folder": "@triggerBody.fileName",
-					"file_name": "@triggerBody.folderPath",
+					"folder": "@triggerBody().fileName",
+					"file_name": "@triggerBody().folderPath",
 					"conatiner": "sales"
 				}
 			}
