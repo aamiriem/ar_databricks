@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "datafactoryarreza"
+		},
+		"ls_adls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_adls'"
+		},
+		"ls_blob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_blob'"
+		},
+		"ls_adls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsarfabric.dfs.core.windows.net/"
+		},
+		"tr_blob_properties_pl_copy_parameters_folder": {
+			"type": "string",
+			"defaultValue": "@triggerBody.filename"
+		},
+		"tr_blob_properties_pl_copy_parameters_file_name": {
+			"type": "string",
+			"defaultValue": "@triggerBody.folderPath"
+		},
+		"tr_blob_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/f1eba71a-1133-42c4-a850-2bb325096eb4/resourceGroups/argrp/providers/Microsoft.Storage/storageAccounts/blobstaamirreza"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "datafactoryarreza_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_adls_accountKey": {
+						"value": "[parameters('ls_adls_accountKey')]"
+					},
+					"ls_blob_connectionString": {
+						"value": "[parameters('ls_blob_connectionString')]"
+					},
+					"ls_adls_properties_typeProperties_url": {
+						"value": "[parameters('ls_adls_properties_typeProperties_url')]"
+					},
+					"tr_blob_properties_pl_copy_parameters_folder": {
+						"value": "[parameters('tr_blob_properties_pl_copy_parameters_folder')]"
+					},
+					"tr_blob_properties_pl_copy_parameters_file_name": {
+						"value": "[parameters('tr_blob_properties_pl_copy_parameters_file_name')]"
+					},
+					"tr_blob_properties_typeProperties_scope": {
+						"value": "[parameters('tr_blob_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

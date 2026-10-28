@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactoryarreza"
+		},
+		"ls_adls_accountKey": {
+			"value": ""
+		},
+		"ls_blob_connectionString": {
+			"value": ""
+		},
+		"ls_adls_properties_typeProperties_url": {
+			"value": "https://adlsarfabric.dfs.core.windows.net/"
+		},
+		"tr_blob_properties_pl_copy_parameters_folder": {
+			"value": "@triggerBody.filename"
+		},
+		"tr_blob_properties_pl_copy_parameters_file_name": {
+			"value": "@triggerBody.folderPath"
+		},
+		"tr_blob_properties_typeProperties_scope": {
+			"value": "/subscriptions/f1eba71a-1133-42c4-a850-2bb325096eb4/resourceGroups/argrp/providers/Microsoft.Storage/storageAccounts/blobstaamirreza"
+		}
+	}
+}
