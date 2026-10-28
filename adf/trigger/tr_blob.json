@@ -10,8 +10,9 @@
 					"type": "PipelineReference"
 				},
 				"parameters": {
-					"folder": "@triggerBody.filename",
-					"file_name": "@triggerBody.folderPath"
+					"folder": "@triggerBody.fileName",
+					"file_name": "@triggerBody.folderPath",
+					"conatiner": "sales"
 				}
 			}
 		],
